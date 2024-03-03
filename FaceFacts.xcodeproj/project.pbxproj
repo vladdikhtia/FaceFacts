@@ -11,6 +11,9 @@
 		3132390D2B950B3100593282 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132390C2B950B3100593282 /* ContentView.swift */; };
 		3132390F2B950B3100593282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3132390E2B950B3100593282 /* Assets.xcassets */; };
 		313239122B950B3100593282 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313239112B950B3100593282 /* Preview Assets.xcassets */; };
+		313239192B950B8700593282 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313239182B950B8700593282 /* Person.swift */; };
+		3132391B2B9511B100593282 /* EditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132391A2B9511B100593282 /* EditPersonView.swift */; };
+		3132391D2B951AE300593282 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132391C2B951AE300593282 /* PeopleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		3132390C2B950B3100593282 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3132390E2B950B3100593282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		313239112B950B3100593282 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		313239182B950B8700593282 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3132391A2B9511B100593282 /* EditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonView.swift; sourceTree = "<group>"; };
+		3132391C2B951AE300593282 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				3132390A2B950B3100593282 /* FaceFactsApp.swift */,
 				3132390C2B950B3100593282 /* ContentView.swift */,
+				3132391C2B951AE300593282 /* PeopleView.swift */,
+				3132391A2B9511B100593282 /* EditPersonView.swift */,
+				313239182B950B8700593282 /* Person.swift */,
 				3132390E2B950B3100593282 /* Assets.xcassets */,
 				313239102B950B3100593282 /* Preview Content */,
 			);
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313239192B950B8700593282 /* Person.swift in Sources */,
+				3132391D2B951AE300593282 /* PeopleView.swift in Sources */,
 				3132390D2B950B3100593282 /* ContentView.swift in Sources */,
 				3132390B2B950B3100593282 /* FaceFactsApp.swift in Sources */,
+				3132391B2B9511B100593282 /* EditPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
