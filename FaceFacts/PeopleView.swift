@@ -25,7 +25,6 @@ struct PeopleView: View {
     
     init(searchString: String = "", sortOrder: [SortDescriptor<Person>] = []) {
         //        _people means change the query itself not a result
-        
         _people = Query(filter: #Predicate { person in // if person in array it will return true, converting swift code to sql code, receiving one person to check,  only show people withmaching name
             
             if searchString.isEmpty {
@@ -53,5 +52,12 @@ struct PeopleView: View {
 }
 
 #Preview {
-    PeopleView()
+    do {
+        let previewer = try Previewer()
+        
+        return PeopleView()
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

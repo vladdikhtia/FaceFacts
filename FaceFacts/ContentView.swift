@@ -10,18 +10,18 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @State private var path : [Person] = []
+    @State private var path = NavigationPath()
     
     @State private var isSearchPresented = true
     @State private var searchText = ""
-    @State private var sortOrder = [SortDescriptor(\Person.name)] // sort our array by the people names
+    @State private var sortOrder = [SortDescriptor(\Person.name)] // sort array by the people names
     
     var body: some View {
         NavigationStack(path: $path) {
             PeopleView(searchString: searchText, sortOrder: sortOrder)
                 .navigationTitle("FaceFacts")
                 .navigationDestination(for: Person.self) { person in
-                    EditPersonView(person: person)
+                    EditPersonView(navigationPath: $path, person: person)
                 }
                 .toolbar {
                     Menu("Sort", systemImage: "arrow.up.arrow.down") {
@@ -46,13 +46,15 @@ struct ContentView: View {
         path.append(person)
     }
     
-    
 }
 
 #Preview {
-    ContentView()
+    do {
+        let previewer = try Previewer()
+        
+        return ContentView()
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }
-
-// crud - create, read, update, delete
-// TODO add sharing between apps
-
